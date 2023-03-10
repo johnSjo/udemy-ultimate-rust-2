@@ -4,6 +4,15 @@
 //
 // Once you've got the documentation here, run `cargo doc --no-deps --open` and take a look!
 
+//! A pumpkin is a vernacular term for mature winter squash of species and
+//! varieties in the genus Cucurbita that has culinary and cultural significance
+//!  but no agreed upon botanical or scientific meaning. The term pumpkin is
+//! sometimes used interchangeably with "squash" or "winter squash", and is
+//! commonly used for cultivars of Cucurbita argyrosperma, Cucurbita ficifolia,
+//! Cucurbita maxima, Cucurbita moschata, and Cucurbita pepo.
+//!
+//! ![Pumpkins](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg)
+
 // 2. What about an image!? Add an image of a pumpkin to the end of the module-level documentation.
 // The markdown format is ![some alt text](https://url-to-the-image.png)
 // Here's the image to link to: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/FrenchMarketPumpkinsB.jpg/700px-FrenchMarketPumpkinsB.jpg
@@ -15,8 +24,15 @@
 // - Document the "roundness" field, explaining that it is a percentage
 // - Document the "orangeness" field, explaining that it is a number from 8 to 27
 
+/// Big orange thing
+///
+/// # Recipes
+///
+/// Recipes will be coming soon.
 pub struct Pumpkin {
+    /// `roundness` is a percentage
     pub roundness: f32,
+    /// `orangeness` is a number from 8 to 27
     pub orangeness: i32,
 }
 
