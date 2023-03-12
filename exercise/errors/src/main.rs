@@ -1,5 +1,7 @@
 // START IN lib.rs!
 
+use std::intrinsics::r#try;
+
 use anyhow::Result;
 use aquarium::Dolphin;
 // Silence some warnings so they don't distract from the exercise.
@@ -29,7 +31,7 @@ fn play_time(dolphin: &Dolphin) -> Result<Vec<String>> {
     Ok(responses)
 }
 
-fn main() {
+fn main() -> Result<()> {
     let dolphins = vec![
         Dolphin {
             name: "Augustinius".into(),
@@ -52,6 +54,7 @@ fn main() {
             hungry: false,
         },
     ];
+
     for dolphin in &dolphins {
         // Challenge: Change main() so that it returns a Result, and instead of handling the error
         // that play_time returns, use the try (?) operator to only handle the success condition.
@@ -76,5 +79,5 @@ fn main() {
 
     // let res = dolphins.iter().map(|dolphin| play_time(dolphin)?).collect();
 
-    // Ok(0)
+    Ok(())
 }
